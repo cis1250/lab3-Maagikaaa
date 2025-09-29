@@ -9,11 +9,18 @@
 n1 = 0
 n2 = 1
 
-terms = int(input("Type how many terms of the Fibonacci sequence you want here (integers only): "))
+while True:
+    user_input = input("Type how many terms of the Fibonacci sequence you want here (integers only): ")
+    try:
+        terms = int(user_input)
+        if terms <= 0:
+            print("Please enter a positive number!")
+            continue
+        break
+    except ValueError:
+        print("Invalid input! Please enter an integer.")
 
-if terms <= 0:
-    print("Please enter a positive number!")
-elif terms == 1:
+if terms == 1:
     print("The sequence is:")
     print(n1)
 else:
