@@ -9,16 +9,19 @@
 n1 = 0
 n2 = 1
 
-terms = int(input("Type how many terms of the Fibonacci sequuence you want here (integers only):"))
-if terms <=0:
-  print("Please enter a positive number!")
-elif terms ==1:
-  print("With that many terms the sequence equals")
-  print(n1)
+terms = int(input("Type how many terms of the Fibonacci sequence you want here (integers only): "))
+
+if terms <= 0:
+    print("Please enter a positive number!")
+elif terms == 1:
+    print("The sequence is:")
+    print(n1)
 else:
-  print("The sequence is:")
-  for _ in range(2, terms):
-     nth = n1+n2
-     print(nth)
-     n1 = n2
-     n2 =nth
+    print("The sequence is:")
+    print(n1)
+    print(n2)
+    for _ in range(2, terms):
+        nth = n1 + n2
+        print(nth)
+        n1 = n2
+        n2 = nth
